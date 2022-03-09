@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Empleado } from './empleado.model';
+import { EmpleadosService } from './empleados.service';
+import { ServicioEmpleadosService } from './servicio-empleados.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app-empleados';
+  
+
 }
