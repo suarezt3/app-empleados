@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { ActualizaComponent } from './actualiza/actualiza.component';
+import { ErrorPersonalizadoComponent } from './error-personalizado/error-personalizado.component';
 
 
 
@@ -23,7 +24,8 @@ import { ActualizaComponent } from './actualiza/actualiza.component';
     HomeComponent,
     ProyectosComponent,
     ContactoComponent,
-    ActualizaComponent
+    ActualizaComponent,
+    ErrorPersonalizadoComponent
   ],
   imports: [
     BrowserModule,
