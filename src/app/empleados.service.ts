@@ -1,4 +1,5 @@
 import { Injectable } from "@angular/core";
+import { DataService } from "./data.service";
 import { Empleado } from "./empleado.model";
 import { ServicioEmpleadosService } from "./servicio-empleados.service";
 
@@ -6,7 +7,9 @@ import { ServicioEmpleadosService } from "./servicio-empleados.service";
 
 export class EmpleadosService{
 
-    constructor(private servicioVentanaEmergente: ServicioEmpleadosService){
+    constructor(
+                private servicioVentanaEmergente: ServicioEmpleadosService,
+                private dataService: DataService){
 
     }
 
@@ -18,10 +21,9 @@ export class EmpleadosService{
       ];
 
       agregarEmpleadoServicio(empleado: Empleado) {
-          this.servicioVentanaEmergente.muestraMensaje(`Persona que se va a agregar
-            ${empleado.nombre}
-            Salario ${empleado.salario}`)
-            this.empleados.push(empleado)
+          this.servicioVentanaEmergente.muestraMensaje(`Persona que se va a agregar ${empleado.nombre} Salario ${empleado.salario}`);
+            this.empleados.push(empleado);
+            this.dataService.guardarEmpleados(this.empleados)
       };
 
 

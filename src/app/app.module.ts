@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,7 @@ import { ProyectosComponent } from './proyectos/proyectos.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { ActualizaComponent } from './actualiza/actualiza.component';
 import { ErrorPersonalizadoComponent } from './error-personalizado/error-personalizado.component';
+import { DataService } from './data.service';
 
 
 
@@ -30,11 +32,13 @@ import { ErrorPersonalizadoComponent } from './error-personalizado/error-persona
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
      ServicioEmpleadosService,
-     EmpleadosService
+     EmpleadosService,
+     DataService
     ],
   bootstrap: [AppComponent]
 })

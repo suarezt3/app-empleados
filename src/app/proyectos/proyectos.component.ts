@@ -37,6 +37,6 @@ export class ProyectosComponent implements OnInit {
   cuadroNombre  :string = "";
   cuadroApellido:string = "";
   cuadroCargo   :string = "";
-  cuadroSalario :Number =  0;
+  cuadroSalario :number =  0;
 
 }
